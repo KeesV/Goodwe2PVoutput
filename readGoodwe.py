@@ -37,6 +37,14 @@ class readGoodwe( iGoodwe.iGoodwe) :
 	    print "User " + str(username) + " Logged in"
 	 
 
+    #--------------------------------------------------------------------------
+   def is_online( self):
+   #TRUE when the GoodWe inverter returns the correct status
+   #
+      print "Vpv0: " + str(self.m_sample.get_vpv(0))
+      print "Vpv1: " + str(self.m_sample.get_vpv(1))
+      return ((self.m_sample.is_inverter_status('Normal')) and (abs(self.m_sample.get_vpv(0)+self.m_sample.get_vpv(1)) > 0.01))
+
    #--------------------------------------------------------------------------
    def read_sample_data( self):
    # Read the data. When a failure is found, it is tried upto 3 times. After 
