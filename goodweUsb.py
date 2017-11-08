@@ -140,6 +140,8 @@ class goodweUsb( iGoodwe.iGoodwe) :
    def is_online( self):
    #TRUE when the GoodWe inverter returns the correct status
    #
+      print "Vpv0: " + str(self.m_sample.get_vpv(0))
+      print "Vpv1: " + str(self.m_sample.get_vpv(1))
       return ((self.m_sample.is_inverter_status('Normal')) and (abs(self.m_sample.get_vpv(0)+self.m_sample.get_vpv(1)) > 0.01))
 
 
