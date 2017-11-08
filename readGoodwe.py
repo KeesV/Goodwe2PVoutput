@@ -63,6 +63,7 @@ class readGoodwe( iGoodwe.iGoodwe) :
    # Do the actual read from the URL
    #
       if self.m_session:
+         print "Reading from URL: " + url
          r = self.m_session.get( url, timeout=20)
          print "Read data: " + r.text
       return r.content
