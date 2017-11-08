@@ -14,6 +14,7 @@ class readGoodwe( iGoodwe.iGoodwe) :
       self.m_login_url = login_url
       self.m_station_id = station_id
       self.m_session = None
+      self.m_gwData = None
       
 
    #--------------------------------------------------------------------------
@@ -41,9 +42,7 @@ class readGoodwe( iGoodwe.iGoodwe) :
    def is_online( self):
    #TRUE when the GoodWe inverter returns the correct status
    #
-      print "Vpv0: " + str(self.m_sample.get_vpv(0))
-      print "Vpv1: " + str(self.m_sample.get_vpv(1))
-      return ((self.m_sample.is_inverter_status('Normal')) and (abs(self.m_sample.get_vpv(0)+self.m_sample.get_vpv(1)) > 0.01))
+      return True
 
    #--------------------------------------------------------------------------
    def read_sample_data( self):
@@ -56,8 +55,8 @@ class readGoodwe( iGoodwe.iGoodwe) :
       while True:
          try:
             sample = self._read_data( url)
-            gw = goodweData.goodweData( sample)
-	    return gw.get_sample()
+            self.m_gwData = goodweData.goodweData( sample)
+	    return self.m_gwData.get_sample()
          except:
             tries += 1
             if tries > 3:
