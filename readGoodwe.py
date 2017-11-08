@@ -66,7 +66,6 @@ class readGoodwe( iGoodwe.iGoodwe) :
          print "Reading from URL: " + url
          # url = "http://goodwe-power.com/PowerStationPlatform/PowerStationReport/InventerDetail?ID=7cb8d7d1-166d-47ca-871b-601e1f6b7575&InventerType=GridInventer&HaveAdverseCurrentData=0&HaveEnvironmentData=0"
          r = self.m_session.get( url, timeout=20)
-         print "Read data: " + r.text
       return r.content
                   
 #---------------- End of file ------------------------------------------------
