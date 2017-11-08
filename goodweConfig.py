@@ -29,21 +29,21 @@ class goodweConfig :
 	    line = line.replace('\'', '')
 	    
 	    if self.GOODWE_SYSTEM_ID in line:
-	       self.goodwe_system_id = line.replace(self.GOODWE_SYSTEM_ID, '')
+	       self.goodwe_system_id = line.replace(self.GOODWE_SYSTEM_ID, '').strip()
 	    if self.GOODWE_USER_ID in line:
-	       self.goodwe_user_id = line.replace(self.GOODWE_USER_ID, '')
+	       self.goodwe_user_id = line.replace(self.GOODWE_USER_ID, '').strip()
 	    if self.GOODWE_PASSWORD in line:
-	       self.goodwe_password = line.replace(self.GOODWE_PASSWORD, '')
+	       self.goodwe_password = line.replace(self.GOODWE_PASSWORD, '').strip()
 	    if self.PVOUTPUT_SYSTEM_ID in line:
-	       self.pvoutput_system_id = line.replace(self.PVOUTPUT_SYSTEM_ID, '')
+	       self.pvoutput_system_id = line.replace(self.PVOUTPUT_SYSTEM_ID, '').strip()
 	    if self.PVOUTPUT_API in line:
-	       self.pvoutput_api = line.replace(self.PVOUTPUT_API, '')
+	       self.pvoutput_api = line.replace(self.PVOUTPUT_API, '').strip()
 	    if self.CSV_DIR in line:
-	       self.csv_dir = line.replace(self.CSV_DIR, '')
+	       self.csv_dir = line.replace(self.CSV_DIR, '').strip()
 	    if self.SPLINE_FIT in line:
-             self.spline_fit = line.replace(self.SPLINE_FIT, '') == "True"
+             self.spline_fit = line.replace(self.SPLINE_FIT, '').strip() == "True"
 	    if self.INPUT_SOURCE in line:
-             self.input_source = line.replace(self.INPUT_SOURCE, '')
+             self.input_source = line.replace(self.INPUT_SOURCE, '').strip()
 
    #--------------------------------------------------------------------------
    def to_string( self):
