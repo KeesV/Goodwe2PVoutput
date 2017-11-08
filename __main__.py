@@ -59,8 +59,9 @@ if __name__ == "__main__":
                                       config.get_goodwe_loginUrl(), 
                                       config.get_goodwe_system_id())
       # Request password for Goodwe-power.com
-      passwd_text = 'Supply password for ' + str(config.get_goodwe_loginUrl()) + ': '
-      password = getpass.getpass( passwd_text)
+      #passwd_text = 'Supply password for ' + str(config.get_goodwe_loginUrl()) + ': '
+      #password = getpass.getpass( passwd_text)
+      password = config.get_goodwe_password()
       goodwe.login( config.get_goodwe_user_id(), password)
    
       if config.get_spline_fit():
