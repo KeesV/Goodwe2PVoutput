@@ -26,7 +26,6 @@ class readGoodwe( iGoodwe.iGoodwe) :
 	 
       with requests.Session() as self.m_session:
          p = self.m_session.post( self.m_login_url, data=payload)
-         print "Login response: " + str(p.text)
 	 if p.status_code != 200:
 	    if 'incorrect' in p.text:
 	       print "Incorrect password for user " + str(username)
@@ -65,6 +64,7 @@ class readGoodwe( iGoodwe.iGoodwe) :
    #
       if self.m_session:
          r = self.m_session.get( url, timeout=20)
+         print "Read data: " + r.text
       return r.content
                   
 #---------------- End of file ------------------------------------------------
