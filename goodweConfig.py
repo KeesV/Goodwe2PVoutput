@@ -32,8 +32,8 @@ class goodweConfig :
 	       self.goodwe_system_id = line.replace(self.GOODWE_SYSTEM_ID, '')
 	    if self.GOODWE_USER_ID in line:
 	       self.goodwe_user_id = line.replace(self.GOODWE_USER_ID, '')
-          if self.GOODWE_PASSWORD in line:
-	       self.goodwe_PASSWORD = line.replace(self.GOODWE_PASSWORD, '')  
+	    if self.GOODWE_PASSWORD in line:
+	       self.goodwe_password = line.replace(self.GOODWE_PASSWORD, '')
 	    if self.PVOUTPUT_SYSTEM_ID in line:
 	       self.pvoutput_system_id = line.replace(self.PVOUTPUT_SYSTEM_ID, '')
 	    if self.PVOUTPUT_API in line:
@@ -41,9 +41,9 @@ class goodweConfig :
 	    if self.CSV_DIR in line:
 	       self.csv_dir = line.replace(self.CSV_DIR, '')
 	    if self.SPLINE_FIT in line:
-               self.spline_fit = line.replace(self.SPLINE_FIT, '') == "True"
+             self.spline_fit = line.replace(self.SPLINE_FIT, '') == "True"
 	    if self.INPUT_SOURCE in line:
-               self.input_source = line.replace(self.INPUT_SOURCE, '')
+             self.input_source = line.replace(self.INPUT_SOURCE, '')
 
    #--------------------------------------------------------------------------
    def to_string( self):
