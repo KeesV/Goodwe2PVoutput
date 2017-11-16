@@ -1,3 +1,5 @@
+import os
+
 class goodweConfig :
    GOODWE_SYSTEM_ID = 'goodwe_system_id'
    GOODWE_USER_ID = 'goodwe_user_id'
