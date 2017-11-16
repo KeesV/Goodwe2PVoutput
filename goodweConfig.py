@@ -46,15 +46,15 @@ class goodweConfig :
              self.input_source = line.replace(self.INPUT_SOURCE, '').strip()
 	    
 	    # If there are things defined in the environment variables, those overwrite what is in the config file
-	    if "GOODWE_SYSTEM_ID" in os.environ
+	    if "GOODWE_SYSTEM_ID" in os.environ:
 	        self.goodwe_system_id = os.getenv("GOODWE_SYSTEM_ID")
-	    if "GOODWE_USER_ID" in os.environ
+	    if "GOODWE_USER_ID" in os.environ:
 	        self.goodwe_user_id = os.getenv("GOODWE_USER_ID")
-	    if "GOODWE_PASSWORD" in os.environ
+	    if "GOODWE_PASSWORD" in os.environ:
 	        self.goodwe_password = os.getenv("GOODWE_PASSWORD")
-	    if "PVOUTPUT_SYSTEM_ID" in os.environ
+	    if "PVOUTPUT_SYSTEM_ID" in os.environ:
 	        self.pvoutput_system_id = os.getenv("PVOUTPUT_SYSTEM_ID")
-	    if "PVOUTPUT_API" in os.environ
+	    if "PVOUTPUT_API" in os.environ:
 	        self.pvoutput_api = os.getenv("PVOUTPUT_API")
 
    #--------------------------------------------------------------------------
